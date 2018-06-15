@@ -337,7 +337,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             switch result {
             case .success(let docs):
                 XCTAssertEqual([], docs)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in aggregate")
             }
             exp.fulfill()
@@ -357,7 +358,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let docs):
                 XCTAssertEqual(self.withoutId(doc1), self.withoutId(docs[0]))
                 XCTAssertEqual(self.withoutId(doc2), self.withoutId(docs[1]))
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in aggregate")
             }
             exp.fulfill()
@@ -372,7 +374,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let docs):
                 XCTAssertEqual(1, docs.count)
                 XCTAssertEqual(self.withoutId(doc2), self.withoutId(docs.first!))
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in aggregate")
             }
             exp.fulfill()
@@ -385,7 +388,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let docs):
                 XCTAssertEqual(1, docs.count)
                 XCTAssertEqual(self.withoutId(doc1), self.withoutId(docs.first!))
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in aggregate")
             }
             exp.fulfill()
@@ -818,7 +822,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(0, updateResult.matchedCount)
                 XCTAssertNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
             exp.fulfill()
@@ -831,7 +836,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(0, updateResult.matchedCount)
                 XCTAssertNotNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
             exp.fulfill()
@@ -844,7 +850,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(1, updateResult.matchedCount)
                 XCTAssertNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
             exp.fulfill()
@@ -894,7 +901,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(0, updateResult.matchedCount)
                 XCTAssertNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
             exp.fulfill()
@@ -907,7 +915,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(0, updateResult.matchedCount)
                 XCTAssertNotNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
             exp.fulfill()
@@ -920,7 +929,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(1, updateResult.matchedCount)
                 XCTAssertNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
 
@@ -940,7 +950,8 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             case .success(let updateResult):
                 XCTAssertEqual(2, updateResult.matchedCount)
                 XCTAssertNil(updateResult.upsertedId)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 XCTFail("unexpected error in update")
             }
             exp.fulfill()
