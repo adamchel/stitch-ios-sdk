@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4969205B2190EB2F00DB340D /* StitchCoreSDKMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969205A2190EB2F00DB340D /* StitchCoreSDKMocks.framework */; };
 		49F021152190CC130046F20E /* StitchCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F021142190CC130046F20E /* StitchCoreSDK.framework */; };
-		6B4544DDF06D90854BA97234 /* Pods_StitchCoreFCMServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3085E196F819E8B9E08BAE8B /* Pods_StitchCoreFCMServiceTests.framework */; };
-		F7164B238B5A727341FB3276 /* Pods_StitchCoreFCMService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851B02BDF4DF019BBD20C5C4 /* Pods_StitchCoreFCMService.framework */; };
+		539BBED35137AC9BFD6F3552 /* Pods_StitchCoreFCMServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED43A6FCE960AB3D702F7D7F /* Pods_StitchCoreFCMServiceTests.framework */; };
+		63C23B3450D6D2A5002991C6 /* Pods_StitchCoreFCMService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147AC2DB925DBCEB6206348F /* Pods_StitchCoreFCMService.framework */; };
 		OBJ_163 /* FCMSendMessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* FCMSendMessageNotification.swift */; };
 		OBJ_164 /* FCMSendMessagePriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* FCMSendMessagePriority.swift */; };
 		OBJ_165 /* FCMSendMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* FCMSendMessageRequest.swift */; };
@@ -34,14 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3085E196F819E8B9E08BAE8B /* Pods_StitchCoreFCMServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StitchCoreFCMServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		147AC2DB925DBCEB6206348F /* Pods_StitchCoreFCMService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StitchCoreFCMService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4969205A2190EB2F00DB340D /* StitchCoreSDKMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StitchCoreSDKMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F021142190CC130046F20E /* StitchCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StitchCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54B3ECC35018C888112947AF /* Pods-StitchCoreFCMService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMService.release.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMService/Pods-StitchCoreFCMService.release.xcconfig"; sourceTree = "<group>"; };
-		5DEB2B328885DDD8721EDDB1 /* Pods-StitchCoreFCMService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMService.debug.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMService/Pods-StitchCoreFCMService.debug.xcconfig"; sourceTree = "<group>"; };
-		6D52563215C1C09C8AC33CA3 /* Pods-StitchCoreFCMServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMServiceTests.release.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMServiceTests/Pods-StitchCoreFCMServiceTests.release.xcconfig"; sourceTree = "<group>"; };
-		851B02BDF4DF019BBD20C5C4 /* Pods_StitchCoreFCMService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StitchCoreFCMService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E040476B269EAD1A5C2DFA1B /* Pods-StitchCoreFCMServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMServiceTests/Pods-StitchCoreFCMServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87986320824239C4BCDBD435 /* Pods-StitchCoreFCMService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMService.debug.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMService/Pods-StitchCoreFCMService.debug.xcconfig"; sourceTree = "<group>"; };
+		9DBD5DE9AE0072C1F0A52C84 /* Pods-StitchCoreFCMServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMServiceTests/Pods-StitchCoreFCMServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B00D396CE1CF1C8B4E4235BE /* Pods-StitchCoreFCMServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMServiceTests.release.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMServiceTests/Pods-StitchCoreFCMServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB6BC97EEB26C4CEBB319B7D /* Pods-StitchCoreFCMService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StitchCoreFCMService.release.xcconfig"; path = "Target Support Files/Pods-StitchCoreFCMService/Pods-StitchCoreFCMService.release.xcconfig"; sourceTree = "<group>"; };
+		ED43A6FCE960AB3D702F7D7F /* Pods_StitchCoreFCMServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StitchCoreFCMServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* FCMSendMessageNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMSendMessageNotification.swift; sourceTree = "<group>"; };
 		OBJ_12 /* FCMSendMessagePriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMSendMessagePriority.swift; sourceTree = "<group>"; };
 		OBJ_13 /* FCMSendMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMSendMessageRequest.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			buildActionMask = 0;
 			files = (
 				49F021152190CC130046F20E /* StitchCoreSDK.framework in Frameworks */,
-				F7164B238B5A727341FB3276 /* Pods_StitchCoreFCMService.framework in Frameworks */,
+				63C23B3450D6D2A5002991C6 /* Pods_StitchCoreFCMService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,20 +72,20 @@
 			buildActionMask = 0;
 			files = (
 				4969205B2190EB2F00DB340D /* StitchCoreSDKMocks.framework in Frameworks */,
-				6B4544DDF06D90854BA97234 /* Pods_StitchCoreFCMServiceTests.framework in Frameworks */,
+				539BBED35137AC9BFD6F3552 /* Pods_StitchCoreFCMServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95214E1D2E52238619397EEE /* Pods */ = {
+		E75FB537B61DEF34E1382369 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5DEB2B328885DDD8721EDDB1 /* Pods-StitchCoreFCMService.debug.xcconfig */,
-				54B3ECC35018C888112947AF /* Pods-StitchCoreFCMService.release.xcconfig */,
-				E040476B269EAD1A5C2DFA1B /* Pods-StitchCoreFCMServiceTests.debug.xcconfig */,
-				6D52563215C1C09C8AC33CA3 /* Pods-StitchCoreFCMServiceTests.release.xcconfig */,
+				87986320824239C4BCDBD435 /* Pods-StitchCoreFCMService.debug.xcconfig */,
+				DB6BC97EEB26C4CEBB319B7D /* Pods-StitchCoreFCMService.release.xcconfig */,
+				9DBD5DE9AE0072C1F0A52C84 /* Pods-StitchCoreFCMServiceTests.debug.xcconfig */,
+				B00D396CE1CF1C8B4E4235BE /* Pods-StitchCoreFCMServiceTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../../Pods;
@@ -96,8 +96,8 @@
 			children = (
 				4969205A2190EB2F00DB340D /* StitchCoreSDKMocks.framework */,
 				49F021142190CC130046F20E /* StitchCoreSDK.framework */,
-				851B02BDF4DF019BBD20C5C4 /* Pods_StitchCoreFCMService.framework */,
-				3085E196F819E8B9E08BAE8B /* Pods_StitchCoreFCMServiceTests.framework */,
+				147AC2DB925DBCEB6206348F /* Pods_StitchCoreFCMService.framework */,
+				ED43A6FCE960AB3D702F7D7F /* Pods_StitchCoreFCMServiceTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 				OBJ_19 /* Tests */,
 				OBJ_136 /* Products */,
 				EB0451C8AD4BAE0FE120B626 /* Frameworks */,
-				95214E1D2E52238619397EEE /* Pods */,
+				E75FB537B61DEF34E1382369 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,7 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_159 /* Build configuration list for PBXNativeTarget "StitchCoreFCMService" */;
 			buildPhases = (
-				81D4ABDA6083C3D600601DD6 /* [CP] Check Pods Manifest.lock */,
+				0FEA4E2DC8FEC3D1EAE9D0B5 /* [CP] Check Pods Manifest.lock */,
 				OBJ_162 /* Sources */,
 				OBJ_170 /* Frameworks */,
 			);
@@ -205,9 +205,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_186 /* Build configuration list for PBXNativeTarget "StitchCoreFCMServiceTests" */;
 			buildPhases = (
-				22FBA7965E958A88EF27E43B /* [CP] Check Pods Manifest.lock */,
+				65EC761F836769055137DAF5 /* [CP] Check Pods Manifest.lock */,
 				OBJ_189 /* Sources */,
 				OBJ_193 /* Frameworks */,
+				4CFB843F7F3C5766CACC4DB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,29 +247,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22FBA7965E958A88EF27E43B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StitchCoreFCMServiceTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		81D4ABDA6083C3D600601DD6 /* [CP] Check Pods Manifest.lock */ = {
+		0FEA4E2DC8FEC3D1EAE9D0B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,6 +263,58 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-StitchCoreFCMService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CFB843F7F3C5766CACC4DB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StitchCoreFCMServiceTests/Pods-StitchCoreFCMServiceTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MongoSwift/MongoSwift.framework",
+				"${PODS_ROOT}/mongo-embedded-c-driver/iPhoneOS/Frameworks/bson.framework",
+				"${PODS_ROOT}/mongo-embedded-c-driver/iPhoneOS/Frameworks/bson.framework.dSYM",
+				"${PODS_ROOT}/mongo-embedded-c-driver/iPhoneOS/Frameworks/mongoc.framework",
+				"${PODS_ROOT}/mongo-embedded-c-driver/iPhoneOS/Frameworks/mongoc.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MongoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/bson.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/bson.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/mongoc.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/mongoc.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StitchCoreFCMServiceTests/Pods-StitchCoreFCMServiceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65EC761F836769055137DAF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StitchCoreFCMServiceTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -330,7 +361,7 @@
 /* Begin XCBuildConfiguration section */
 		OBJ_160 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DEB2B328885DDD8721EDDB1 /* Pods-StitchCoreFCMService.debug.xcconfig */;
+			baseConfigurationReference = 87986320824239C4BCDBD435 /* Pods-StitchCoreFCMService.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -356,7 +387,7 @@
 		};
 		OBJ_161 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54B3ECC35018C888112947AF /* Pods-StitchCoreFCMService.release.xcconfig */;
+			baseConfigurationReference = DB6BC97EEB26C4CEBB319B7D /* Pods-StitchCoreFCMService.release.xcconfig */;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -382,7 +413,7 @@
 		};
 		OBJ_187 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E040476B269EAD1A5C2DFA1B /* Pods-StitchCoreFCMServiceTests.debug.xcconfig */;
+			baseConfigurationReference = 9DBD5DE9AE0072C1F0A52C84 /* Pods-StitchCoreFCMServiceTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -405,7 +436,7 @@
 		};
 		OBJ_188 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D52563215C1C09C8AC33CA3 /* Pods-StitchCoreFCMServiceTests.release.xcconfig */;
+			baseConfigurationReference = B00D396CE1CF1C8B4E4235BE /* Pods-StitchCoreFCMServiceTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -448,7 +479,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
@@ -469,7 +500,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;

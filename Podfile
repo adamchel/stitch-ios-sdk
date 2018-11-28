@@ -27,6 +27,7 @@ target :StitchCoreSDK do
     target :StitchCoreSDKTests do
         pod 'JSONWebToken', '~> 2.2.0'
         pod 'Swifter', '~> 1.4.5'
+        pod 'MongoSwift', '= 0.0.7'
 
         inherit! :search_paths
     end
@@ -36,6 +37,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
 
         target :StitchCoreFCMServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -45,6 +48,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
         
         target :StitchCoreTwilioServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -56,6 +61,7 @@ target :StitchCoreSDK do
         inherit! :search_paths
         target :StitchCoreRemoteMongoDBServiceTests do
             pod 'MongoMobile', '= 0.0.5'
+            
             inherit! :search_paths
         end
     end
@@ -66,6 +72,8 @@ target :StitchCoreSDK do
 
         inherit! :search_paths
         target :StitchCoreLocalMongoDBServiceTests do
+            pod 'MongoMobile', '= 0.0.5'
+
             inherit! :search_paths
         end
     end
@@ -75,6 +83,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
 
         target :StitchCoreHTTPServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -84,6 +94,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
 
         target :StitchCoreAWSSESServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -93,6 +105,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
         
         target :StitchCoreAWSS3ServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -102,6 +116,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
 
         target :StitchCoreAWSServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -112,6 +128,8 @@ target :StitchCoreSDK do
     
         target :StitchCoreTests do
             pod 'JSONWebToken', '~> 2.2.0'
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -121,6 +139,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchDarwinCoreTestUtilsTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -130,6 +150,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchTwilioServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -139,6 +161,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchRemoteMongoDBServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -148,6 +172,8 @@ target :StitchCoreSDK do
         pod 'MongoMobile', '= 0.0.5'
     
         target :StitchLocalMongoDBServiceTests do
+            pod 'MongoMobile', '= 0.0.5'
+
             inherit! :search_paths
         end
     end
@@ -157,6 +183,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchHTTPServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -166,6 +194,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchFCMServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -175,6 +205,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchAWSSESServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -184,6 +216,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchAWSS3ServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
@@ -193,6 +227,8 @@ target :StitchCoreSDK do
         inherit! :search_paths
     
         target :StitchAWSServiceTests do
+            pod 'MongoSwift', '= 0.0.7'
+
             inherit! :search_paths
         end
     end
