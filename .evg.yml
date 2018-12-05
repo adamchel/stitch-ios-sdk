@@ -25,7 +25,7 @@ functions:
           cd mongodb-*
           echo "starting mongod..."
           mkdir db_files
-          ./bin/mongod --dbpath ./db_files --port 26000
+          ./bin/mongod --dbpath ./db_files --port 26000 --replSet test
     - command: shell.exec
       params:
         script: |
@@ -33,6 +33,7 @@ functions:
           cd mongodb-*
           echo "waiting for mongod to start up"
           ./bin/mongo --nodb --eval 'assert.soon(function(x){try{var d = new Mongo("localhost:26000"); return true}catch(e){return false}}, "timed out connecting")'
+          ./bin/mongo --port 26000 --eval 'rs.initiate()'
           echo "mongod is up."
   "setup_stitch":
     - command: shell.exec
@@ -42,12 +43,14 @@ functions:
           echo "cloning stitch"
           mkdir -p src/github.com/10gen
           git clone git@github.com:10gen/stitch src/github.com/10gen/stitch
+
           echo "downloading update_doc"
           curl --silent -O "https://s3.amazonaws.com/stitch-artifacts/stitch-mongo-libs/stitch_mongo_libs_osx_patch_cbcbfd8ebefcca439ff2e4d99b022aedb0d61041_59e2b7a5c9ec4432c400181c_17_10_15_01_19_33/update_doc"
           echo "downloading assisted_agg"
           curl --silent -O "https://s3.amazonaws.com/stitch-artifacts/stitch-mongo-libs/stitch_mongo_libs_osx_patch_cbcbfd8ebefcca439ff2e4d99b022aedb0d61041_59e2b7ab2a60ed5647001827_17_10_15_01_19_39/assisted_agg"
           chmod +x update_doc
           chmod +x assisted_agg
+
           echo "building transpiler"
           cd src/github.com/10gen/stitch/etc/transpiler
           curl -O "https://nodejs.org/dist/v8.11.2/node-v8.11.2-darwin-x64.tar.gz"
@@ -94,8 +97,8 @@ tasks:
         params: 
           script: |
             set -e
-            cd stitch-ios-sdk/StitchCore
-            swiftlint
+            cd stitch-ios-sdk
+            contrib/lint_projects.sh
   - name: run_tests
     commands:
       - func: "fetch_source"
@@ -122,7 +125,7 @@ tasks:
             
             source ./creds
             if pgrep CoreSimulator; then pkill -9 CoreSimulator; fi
-            export DEVELOPER_DIR=/Applications/Xcode9.2.app
+            export DEVELOPER_DIR=/Applications/Xcode10.0.app
             cd stitch-ios-sdk
             export GEM_HOME=`pwd`
             export GEM_PATH=`pwd`
@@ -131,16 +134,25 @@ tasks:
             bin/pod setup
             bin/pod install
             echo "...testing core"
-            xcodebuild test -workspace Stitch.xcworkspace/ -scheme "All Core Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2'
+            xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "All Core Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
             echo "...testing Darwin"
-            xcodebuild test -workspace Stitch.xcworkspace/ -scheme "All Darwin Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2'
+            xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "All Darwin Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
+  - name: print_diag_log
+    commands:
+      - command: shell.exec
+        params:
+          script: |
+            cat /Users/mci/Library/Developer/Xcode/DerivedData/Stitch-ebrgpqrpztftdvgvolrvhwspivry/Logs/Test/Test-All Core Tests-2018.12.03_21-57-06-+0000.xcresult/1_Test/Diagnostics/StitchCoreAWSS3ServiceTests-34964FC5-26CE-48FD-A62D-0938ADBF03B4/StitchCoreAWSS3ServiceTests-3BCC8F71-461A-4944-AFA8-9B10036049A1/Session-StitchCoreAWSS3ServiceTests-2018-12-03_215820-e7S1qk.log
+
 buildvariants:
-- name: macos-1013
-  display_name: MacOS 10.13
+- name: macos-1014
+  display_name: MacOS 10.14
   run_on:
-    - macos-1013
+    - macos-1014
   expansions:
-    mongodb_url: http://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.4.4.tgz
+    mongodb_url: https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.2.tgz
     transpiler_target: node8-macos
   tasks:
     - name: run_tests
+    - name: lint
+    - name: print_diag_log
