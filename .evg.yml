@@ -142,13 +142,13 @@ tasks:
       - command: shell.exec
         params:
           script: |
-            cat /Users/mci/Library/Developer/Xcode/DerivedData/Stitch-ebrgpqrpztftdvgvolrvhwspivry/Logs/Test/Test-All Core Tests-2018.12.03_21-57-06-+0000.xcresult/1_Test/Diagnostics/StitchCoreAWSS3ServiceTests-34964FC5-26CE-48FD-A62D-0938ADBF03B4/StitchCoreAWSS3ServiceTests-3BCC8F71-461A-4944-AFA8-9B10036049A1/Session-StitchCoreAWSS3ServiceTests-2018-12-03_215820-e7S1qk.log
+            # cat /Users/mci/Library/Developer/Xcode/DerivedData/Stitch-ebrgpqrpztftdvgvolrvhwspivry/Logs/Test/Test-All Core Tests-2018.12.03_21-57-06-+0000.xcresult/1_Test/Diagnostics/StitchCoreAWSS3ServiceTests-34964FC5-26CE-48FD-A62D-0938ADBF03B4/StitchCoreAWSS3ServiceTests-3BCC8F71-461A-4944-AFA8-9B10036049A1/Session-StitchCoreAWSS3ServiceTests-2018-12-03_215820-e7S1qk.log
 
 buildvariants:
-- name: macos-1014
+- name: macos-1014-stitch
   display_name: MacOS 10.14
   run_on:
-    - macos-1014
+    - macos-1014-stitch
   expansions:
     mongodb_url: https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.2.tgz
     transpiler_target: node8-macos
