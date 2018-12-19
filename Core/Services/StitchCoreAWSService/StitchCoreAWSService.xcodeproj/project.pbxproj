@@ -210,7 +210,10 @@
 				TargetAttributes = {
 					498062CA2185B7B700E2A3A2 = {
 						CreatedOnToolsVersion = 10.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
+					};
+					"StitchCoreAWSService::StitchCoreAWSService" = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -361,6 +364,9 @@
 			baseConfigurationReference = 90B3302FD76B6F2A6354FDB8 /* Pods-StitchCoreAWSServiceTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -371,6 +377,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = StitchCoreAWSServiceTests;
@@ -382,6 +389,9 @@
 			baseConfigurationReference = 5B073E55C451D0D1AF477DC4 /* Pods-StitchCoreAWSServiceTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -392,6 +402,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = StitchCoreAWSServiceTests;
@@ -402,6 +413,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9B6ED34B9716B2374C85D74 /* Pods-StitchCoreAWSService.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,6 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = StitchCoreAWSService;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
@@ -428,6 +443,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA058A8C7145D379A331D191 /* Pods-StitchCoreAWSService.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,6 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = StitchCoreAWSService;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;

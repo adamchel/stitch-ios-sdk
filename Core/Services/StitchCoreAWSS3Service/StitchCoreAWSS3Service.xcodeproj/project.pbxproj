@@ -43,8 +43,8 @@
 		OBJ_14 /* CoreAWSS3ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAWSS3ServiceClient.swift; sourceTree = "<group>"; };
 		OBJ_17 /* CoreAWSS3ServiceClientUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAWSS3ServiceClientUnitTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		StitchCoreAWSS3Service::StitchCoreAWSS3Service::Product /* StitchCoreAWSS3Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StitchCoreAWSS3Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests::Product /* StitchCoreAWSS3ServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = StitchCoreAWSS3ServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"StitchCoreAWSS3Service::StitchCoreAWSS3Service::Product" /* StitchCoreAWSS3Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StitchCoreAWSS3Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests::Product" /* StitchCoreAWSS3ServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = StitchCoreAWSS3ServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 		OBJ_129 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests::Product /* StitchCoreAWSS3ServiceTests.xctest */,
-				StitchCoreAWSS3Service::StitchCoreAWSS3Service::Product /* StitchCoreAWSS3Service.framework */,
+				"StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests::Product" /* StitchCoreAWSS3ServiceTests.xctest */,
+				"StitchCoreAWSS3Service::StitchCoreAWSS3Service::Product" /* StitchCoreAWSS3Service.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -162,7 +162,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		StitchCoreAWSS3Service::StitchCoreAWSS3Service /* StitchCoreAWSS3Service */ = {
+		"StitchCoreAWSS3Service::StitchCoreAWSS3Service" /* StitchCoreAWSS3Service */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_152 /* Build configuration list for PBXNativeTarget "StitchCoreAWSS3Service" */;
 			buildPhases = (
@@ -177,10 +177,10 @@
 			);
 			name = StitchCoreAWSS3Service;
 			productName = StitchCoreAWSS3Service;
-			productReference = StitchCoreAWSS3Service::StitchCoreAWSS3Service::Product /* StitchCoreAWSS3Service.framework */;
+			productReference = "StitchCoreAWSS3Service::StitchCoreAWSS3Service::Product" /* StitchCoreAWSS3Service.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests /* StitchCoreAWSS3ServiceTests */ = {
+		"StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests" /* StitchCoreAWSS3ServiceTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_175 /* Build configuration list for PBXNativeTarget "StitchCoreAWSS3ServiceTests" */;
 			buildPhases = (
@@ -196,7 +196,7 @@
 			);
 			name = StitchCoreAWSS3ServiceTests;
 			productName = StitchCoreAWSS3ServiceTests;
-			productReference = StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests::Product /* StitchCoreAWSS3ServiceTests.xctest */;
+			productReference = "StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests::Product" /* StitchCoreAWSS3ServiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,6 +206,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"StitchCoreAWSS3Service::StitchCoreAWSS3Service" = {
+						ProvisioningStyle = Automatic;
+					};
+					"StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests" = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "StitchCoreAWSS3Service" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -219,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				StitchCoreAWSS3Service::StitchCoreAWSS3Service /* StitchCoreAWSS3Service */,
-				StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests /* StitchCoreAWSS3ServiceTests */,
+				"StitchCoreAWSS3Service::StitchCoreAWSS3Service" /* StitchCoreAWSS3Service */,
+				"StitchCoreAWSS3Service::StitchCoreAWSS3ServiceTests" /* StitchCoreAWSS3ServiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,7 +351,7 @@
 /* Begin PBXTargetDependency section */
 		492FA7312190934D001DFD53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = StitchCoreAWSS3Service::StitchCoreAWSS3Service /* StitchCoreAWSS3Service */;
+			target = "StitchCoreAWSS3Service::StitchCoreAWSS3Service" /* StitchCoreAWSS3Service */;
 			targetProxy = 492FA7302190934D001DFD53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -353,6 +361,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CA359100BBB4A31873140333 /* Pods-StitchCoreAWSS3Service.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,6 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = StitchCoreAWSS3Service;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
@@ -379,6 +391,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7265E9176F455A9502845C0C /* Pods-StitchCoreAWSS3Service.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -394,6 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = StitchCoreAWSS3Service;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
@@ -406,6 +422,9 @@
 			baseConfigurationReference = C4142B8CDD1EF63E7FDBF70E /* Pods-StitchCoreAWSS3ServiceTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,6 +437,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = StitchCoreAWSS3ServiceTests;
@@ -429,6 +449,9 @@
 			baseConfigurationReference = B947A63915B2B18F8CFE2EB6 /* Pods-StitchCoreAWSS3ServiceTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,6 +464,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = StitchCoreAWSS3ServiceTests;

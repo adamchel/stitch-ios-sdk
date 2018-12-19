@@ -1327,7 +1327,7 @@
 			baseConfigurationReference = 00721A8AA4E132139B3B0168 /* Pods-StitchCoreSDKTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1347,7 +1347,7 @@
 			baseConfigurationReference = DAFA4722A7F7C89C0DBAC954 /* Pods-StitchCoreSDKTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				LD_RUNPATH_SEARCH_PATHS = (

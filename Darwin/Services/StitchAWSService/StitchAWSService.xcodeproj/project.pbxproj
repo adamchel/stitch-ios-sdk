@@ -570,10 +570,11 @@
 			baseConfigurationReference = A8A126EED5D296D9E6BFDB54 /* Pods-StitchAWSServiceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StitchAWSServiceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -594,6 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.StitchAWSServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OBJC_BRIDGING_HEADER = StitchAWSServiceTests/AWSServiceTestsConstants.h;
 				SWIFT_VERSION = 4.2;
@@ -606,7 +608,9 @@
 			baseConfigurationReference = AB400DA83C3C29A72D216B19 /* Pods-StitchAWSServiceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = StitchAWSServiceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -619,6 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.StitchAWSServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OBJC_BRIDGING_HEADER = StitchAWSServiceTests/AWSServiceTestsConstants.h;
 				SWIFT_VERSION = 4.2;
