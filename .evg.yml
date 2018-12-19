@@ -127,6 +127,12 @@ tasks:
             if pgrep CoreSimulator; then pkill -9 CoreSimulator; fi
             export DEVELOPER_DIR=/Applications/Xcode10.0.app
             cd stitch-ios-sdk
+
+            pushd Dummy
+            xcodebuild
+            xcodebuild test -scheme "Dummy"
+            popd
+
             export GEM_HOME=`pwd`
             export GEM_PATH=`pwd`
             locate cocoapods
@@ -134,15 +140,35 @@ tasks:
             bin/pod setup
             bin/pod install
             echo "...testing core"
+            # xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "StitchCoreHTTPService" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
+            xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "StitchCoreSDK" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
             xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "All Core Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
             echo "...testing Darwin"
             xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "All Darwin Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
   - name: print_diag_log
     commands:
+      - func: "fetch_source"
       - command: shell.exec
         params:
           script: |
-            # cat /Users/mci/Library/Developer/Xcode/DerivedData/Stitch-ebrgpqrpztftdvgvolrvhwspivry/Logs/Test/Test-All Core Tests-2018.12.03_21-57-06-+0000.xcresult/1_Test/Diagnostics/StitchCoreAWSS3ServiceTests-34964FC5-26CE-48FD-A62D-0938ADBF03B4/StitchCoreAWSS3ServiceTests-3BCC8F71-461A-4944-AFA8-9B10036049A1/Session-StitchCoreAWSS3ServiceTests-2018-12-03_215820-e7S1qk.log
+            set -e
+            rm -r /Users/mci/Library/Developer/Xcode/DerivedData
+            xcode-select -p
+            echo which xcodebuild
+            which xcodebuild
+            xcodebuild -version
+            alias xcb=/Applications/Xcode10.0.0.app/Contents/Developer/usr/bin/xcodebuild
+            cd stitch-ios-sdk
+            pushd Dummy
+            # locate xcodebuild
+            # xcb
+            clang --version
+            xcb -version
+            # xcb
+            xcb -scheme "Dummy" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
+            xcb test -scheme "Dummy" -showdestinations
+            xcb test -scheme "Dummy" -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0'
+            popd
 
 buildvariants:
 - name: macos-1014-stitch
