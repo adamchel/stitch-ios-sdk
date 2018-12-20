@@ -7,10 +7,11 @@ functions:
     - command: shell.exec
       params:
         script: |
-          git clone https://github.com/realm/SwiftLint
-          cd SwiftLint
-          git submodule update --init --recursive
-          make install
+          mkdir -p SwiftLint
+          pushd SwiftLint
+          curl -o swiftlint.zip -L https://github.com/realm/SwiftLint/releases/download/0.29.1/portable_swiftlint.zip
+          unzip swiftlint.zip
+          popd
   "setup_mongod":
     - command: shell.exec
       params:
@@ -97,6 +98,9 @@ tasks:
         params: 
           script: |
             set -e
+            pushd SwiftLint
+            export PATH=`pwd`:$PATH
+            popd
             cd stitch-ios-sdk
             contrib/lint_projects.sh
   - name: run_tests
@@ -128,11 +132,6 @@ tasks:
             export DEVELOPER_DIR=/Applications/Xcode10.0.app
             cd stitch-ios-sdk
 
-            pushd Dummy
-            xcodebuild
-            xcodebuild test -scheme "Dummy"
-            popd
-
             export GEM_HOME=`pwd`
             export GEM_PATH=`pwd`
             locate cocoapods
@@ -140,8 +139,6 @@ tasks:
             bin/pod setup
             bin/pod install
             echo "...testing core"
-            # xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "StitchCoreHTTPService" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
-            xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "StitchCoreSDK" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
             xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "All Core Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
             echo "...testing Darwin"
             xcodebuild test -verbose -workspace Stitch.xcworkspace/ -scheme "All Darwin Tests" -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
