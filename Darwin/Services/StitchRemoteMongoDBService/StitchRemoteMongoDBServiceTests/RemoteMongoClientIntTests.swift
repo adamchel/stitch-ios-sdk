@@ -1480,7 +1480,7 @@ class RemoteMongoClientIntTests: BaseStitchIntTestCocoaTouch {
             return
         }
 
-        // TODO: Replace `joiner` with new await syntax
+        // Eventually we can replace `joiner` with new await syntax
         // Insert a sample Document
         coll.insertOne(["hello": "world1", "num": 1], joiner.capture())
         _ = joiner.capturedValue
