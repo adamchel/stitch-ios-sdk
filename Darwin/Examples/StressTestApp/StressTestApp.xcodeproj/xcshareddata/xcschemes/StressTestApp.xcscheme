@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "StitchCoreLocalMongoDBService::StitchCoreLocalMongoDBService"
-               BuildableName = "StitchCoreLocalMongoDBService.framework"
-               BlueprintName = "StitchCoreLocalMongoDBService"
-               ReferencedContainer = "container:StitchCoreLocalMongoDBService.xcodeproj">
+               BlueprintIdentifier = "1EB84F79223AFC2100B441BF"
+               BuildableName = "StressTestApp.app"
+               BlueprintName = "StressTestApp"
+               ReferencedContainer = "container:StressTestApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,13 +32,32 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "StitchCoreLocalMongoDBService::StitchCoreLocalMongoDBServiceTests"
-               BuildableName = "StitchCoreLocalMongoDBServiceTests.xctest"
-               BlueprintName = "StitchCoreLocalMongoDBServiceTests"
-               ReferencedContainer = "container:StitchCoreLocalMongoDBService.xcodeproj">
+               BlueprintIdentifier = "1EB84F8D223AFC2300B441BF"
+               BuildableName = "StressTestAppTests.xctest"
+               BlueprintName = "StressTestAppTests"
+               ReferencedContainer = "container:StressTestApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1EB84F98223AFC2300B441BF"
+               BuildableName = "StressTestAppUITests.xctest"
+               BlueprintName = "StressTestAppUITests"
+               ReferencedContainer = "container:StressTestApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1EB84F79223AFC2100B441BF"
+            BuildableName = "StressTestApp.app"
+            BlueprintName = "StressTestApp"
+            ReferencedContainer = "container:StressTestApp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -52,15 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "StitchCoreLocalMongoDBService::StitchCoreLocalMongoDBService"
-            BuildableName = "StitchCoreLocalMongoDBService.framework"
-            BlueprintName = "StitchCoreLocalMongoDBService"
-            ReferencedContainer = "container:StitchCoreLocalMongoDBService.xcodeproj">
+            BlueprintIdentifier = "1EB84F79223AFC2100B441BF"
+            BuildableName = "StressTestApp.app"
+            BlueprintName = "StressTestApp"
+            ReferencedContainer = "container:StressTestApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1EB84F79223AFC2100B441BF"
+            BuildableName = "StressTestApp.app"
+            BlueprintName = "StressTestApp"
+            ReferencedContainer = "container:StressTestApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
