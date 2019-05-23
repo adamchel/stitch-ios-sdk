@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		110E02E721D6A8C9000B770F /* StitchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E02E621D6A8C9000B770F /* StitchCore.framework */; };
 		110E02F121D6A9AB000B770F /* StitchDarwinCoreTestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E02F021D6A9AB000B770F /* StitchDarwinCoreTestUtils.framework */; };
 		110E02F321D6A9B0000B770F /* StitchCoreAdminClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E02F221D6A9B0000B770F /* StitchCoreAdminClient.framework */; };
-		11B54E1A211248D80009E0F0 /* StitchAWSService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B54E10211248D80009E0F0 /* StitchAWSService.framework */; };
 		11B54E1F211248D80009E0F0 /* AWSServiceClientIntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B54E1E211248D80009E0F0 /* AWSServiceClientIntTests.swift */; };
+		11CBB5F92297444700A06368 /* StitchDarwinCoreTestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CBB5F82297444700A06368 /* StitchDarwinCoreTestUtils.framework */; };
+		11CBB5FB2297447A00A06368 /* StitchCoreAdminClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CBB5FA2297447A00A06368 /* StitchCoreAdminClient.framework */; };
 		11FCDC33211263E200894377 /* AWSServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDC32211263E200894377 /* AWSServiceClient.swift */; };
 		11FCDC352112640400894377 /* AWSServiceClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDC342112640400894377 /* AWSServiceClientImpl.swift */; };
 		11FCDC372112643600894377 /* StitchAWSServiceExports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FCDC362112643600894377 /* StitchAWSServiceExports.swift */; };
@@ -40,6 +41,8 @@
 		11B54E19211248D80009E0F0 /* StitchAWSServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchAWSServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B54E1E211248D80009E0F0 /* AWSServiceClientIntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSServiceClientIntTests.swift; sourceTree = "<group>"; };
 		11B54E20211248D80009E0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CBB5F82297444700A06368 /* StitchDarwinCoreTestUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StitchDarwinCoreTestUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CBB5FA2297447A00A06368 /* StitchCoreAdminClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StitchCoreAdminClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FCDBDB2112581400894377 /* AWSServiceTestsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSServiceTestsConstants.h; sourceTree = "<group>"; };
 		11FCDC32211263E200894377 /* AWSServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSServiceClient.swift; sourceTree = "<group>"; };
 		11FCDC342112640400894377 /* AWSServiceClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSServiceClientImpl.swift; sourceTree = "<group>"; };
@@ -71,7 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B54E1A211248D80009E0F0 /* StitchAWSService.framework in Frameworks */,
+				11CBB5FB2297447A00A06368 /* StitchCoreAdminClient.framework in Frameworks */,
+				11CBB5F92297444700A06368 /* StitchDarwinCoreTestUtils.framework in Frameworks */,
 				8403B94CB432EA5C777A272F /* Pods_StitchAWSServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +127,8 @@
 		11FCDBD62112566100894377 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11CBB5FA2297447A00A06368 /* StitchCoreAdminClient.framework */,
+				11CBB5F82297444700A06368 /* StitchDarwinCoreTestUtils.framework */,
 				110E02F221D6A9B0000B770F /* StitchCoreAdminClient.framework */,
 				110E02F021D6A9AB000B770F /* StitchDarwinCoreTestUtils.framework */,
 				110E02E621D6A8C9000B770F /* StitchCore.framework */,
@@ -573,7 +579,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "\"$(SRCROOT)/../../../Frameworks/macos\" $(inherited) @executable_path/Frameworks @loader_path/Frameworks $(inherited) @executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"\"$(SRCROOT)/../../../Frameworks/macos\"",
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.StitchAWSServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";

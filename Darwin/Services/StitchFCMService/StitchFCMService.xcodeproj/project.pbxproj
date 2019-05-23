@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		113DE14621D69FA900CC7595 /* StitchCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113DE14521D69FA900CC7595 /* StitchCore.framework */; };
-		119F124B20D218D6009B1CF5 /* StitchFCMService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119F124120D218D6009B1CF5 /* StitchFCMService.framework */; };
 		119F126520D21DA8009B1CF5 /* FCMServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F126420D21DA8009B1CF5 /* FCMServiceClient.swift */; };
 		119F126720D21DB2009B1CF5 /* FCMServicePushClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F126620D21DB2009B1CF5 /* FCMServicePushClient.swift */; };
 		119F126A20D21DDA009B1CF5 /* FCMServiceClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F126920D21DDA009B1CF5 /* FCMServiceClientImpl.swift */; };
@@ -96,9 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494335AE219235ED005B170D /* StitchDarwinCoreTestUtils.framework in Frameworks */,
 				494335AA21923243005B170D /* StitchCoreAdminClient.framework in Frameworks */,
-				119F124B20D218D6009B1CF5 /* StitchFCMService.framework in Frameworks */,
+				494335AE219235ED005B170D /* StitchDarwinCoreTestUtils.framework in Frameworks */,
 				5EC3C62A0D2BE5F73367F340 /* Pods_StitchFCMServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +547,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(inherited) \"$(SRCROOT)/../../../Frameworks/macos\" @executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Frameworks/macos\"",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.StitchFCMService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -602,7 +607,10 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				"FRAMEWORK_SEARCH_PATHS[sdk=macosx10.13]" = "\"$(SRCROOT)/../../../Frameworks/macos\" $(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx10.13]" = (
+					"\"$(SRCROOT)/../../../Frameworks/macos\"",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = StitchFCMServiceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
